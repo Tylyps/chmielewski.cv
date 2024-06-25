@@ -1,0 +1,33 @@
+#links article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+#links a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--text-active-color);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.2s;
+}
+
+#links a:hover {
+  scale: 1.1;
+  background: white;
+  color: var(--text-active-color);
+  border-color: white;
+}
+
+#links a h3 {
+  margin: 0;
+}
+
+#links a i {
+  margin-left: 5px;
+}

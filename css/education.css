@@ -1,0 +1,38 @@
+#education {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#education > h2 {
+  width: 100%;
+}
+
+.educationContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s scale;
+}
+
+.educationContainer:hover {
+  scale: 1.05;
+}
+
+.educationContainer > * {
+  margin: 0;
+  text-shadow: 0 0 5px var(--text-active-color);
+}
+
+.educationContainer .schoolName {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+@media (width < 800px) {
+  .educationContainer {
+    width: 100%;
+    margin: 25px 0;
+  }
+}

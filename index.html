@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/background.css" />
+    <link rel="stylesheet" href="./css/skills.css" />
+    <link rel="stylesheet" href="./css/experience.css" />
+    <link rel="stylesheet" href="./css/education.css" />
+    <link rel="stylesheet" href="./css/courses.css" />
+    <link rel="stylesheet" href="./css/interests.css" />
+    <link rel="stylesheet" href="./css/links.css" />
+    <link rel="stylesheet" href="./css/game.css" />
+    <title>CV - Jakub Chmielewski</title>
+  </head>
+  <body>
+    <div class="backgroundContainer">
+      <!-- <i class="fa-solid fa-star"></i> -->
+    </div>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#skills" data-lang-key="SKILLS"> Umiejętności </a>
+          </li>
+          <li>
+            <a href="#experience" data-lang-key="EXPERIENCE"> Doświadczenie </a>
+          </li>
+          <li>
+            <a href="#education" data-lang-key="EDUCATION"> Wykształcenie </a>
+          </li>
+          <li><a href="#courses" data-lang-key="COURSES"> Kursy </a></li>
+          <li>
+            <a href="#interests" data-lang-key="INTRESTS"> Zainteresowania </a>
+          </li>
+          <li><a href="#links" data-lang-key="LINKS"> Linki </a></li>
+          <li>
+            <button id="languageBtn">🇵🇱/🇬🇧</button>
+          </li>
+        </ul>
+      </nav>
+      <button class="menuButton">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+    </header>
+    <main>
+      <section id="about" class="pageSection">
+        <h2 data-lang-key="ABOUT">O mnie</h2>
+        <article class="aboutContainer">
+          <div class="aboutDataContainer">
+            <h4 data-lang-key="ABOUT_TITLE"></h4>
+            <p data-lang-key="ABOUT_DESCRIPTION"></p>
+          </div>
+          <div class="aboutImageContainer">
+            <img src="" class="aboutImage" alt="" />
+          </div>
+        </article>
+      </section>
+      <section id="skills" class="pageSection">
+        <h2 data-lang-key="SKILLS">Umiejętności</h2>
+        <article>
+          <h4 data-lang-key="SKILLS_COMMERCIAL">Komercyjne</h4>
+          <div class="skillsContainer commercialSkills">
+            <!-- <div class="skillContainer">
+              <img srcset="skillUrl">
+              <div class="skillsLabelContainer">
+                <h5>SkillName</h5>
+                <h6 data-lang-key="SKILL_LVL_"></h6>
+              </div>
+            </div> -->
+          </div>
+        </article>
+        <article>
+          <h4 data-lang-key="SKILLS_NO_COMMERCIAL">Niedochodowy</h4>
+          <div class="skillsContainer nocommercialSkills"></div>
+        </article>
+      </section>
+      <section id="experience" class="pageSection">
+        <h2 data-lang-key="EXPERIENCE">Doświadczenie</h2>
+        <!-- <article>
+          <h3>WorkEmployer</h3>
+          <h4>WorkDate</h4>
+          <h4>WorkTitle</h4>
+          <div class="projectInfoContainer">
+            <h4 class="projectName">Project Title</h4>
+            <h4 class="projectTime">Project Time</h4>
+            <p class="projectDescription">Project Description</p>
+            <h4 class="projectResponsibilityTitle">Responsibility:</h4>
+            <p class="projectResponsibility">Project Responsibility</p>
+            <h4 class="projectTechnologiesTitle">Key technologies:</h4>
+            <p class="projectTechnologies">Technologies</p>
+          </div>
+        </article> -->
+      </section>
+      <section id="education" class="pageSection">
+        <h2 data-lang-key="EDUCATION">Wykształcenie</h2>
+        <!-- <article>
+          <h3></h3>
+          <h4></h4>
+          <h4><span></span><span></span></h4>
+          <h4><span></span><span></span></h4>
+        </article> -->
+      </section>
+      <section id="courses" class="pageSection">
+        <h2 data-lang-key="COURSES">Kursy</h2>
+      </section>
+      <section id="interests" class="pageSection">
+        <h2 data-lang-key="INTRESTS">Zainteresowania</h2>
+      </section>
+      <section id="links" class="pageSection">
+        <h2 data-lang-key="LINKS">Linki</h2>
+        <h4 data-lang-key="CONTACT_INFO"></h4>
+        <article>
+          <a href="https://github.com/Tylyps" target="_blank">
+            <h3>Github<i class="fa-brands fa-github"></i></h3>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jakub-chmielewski-0175b3180/"
+            target="_blank"
+          >
+            <h3>Linkedin<i class="fa-brands fa-linkedin"></i></h3>
+          </a>
+        </article>
+      </section>
+      <section id="game" class="pageSection">
+        <h4 data-lang-key="GAME_INFO"></h4>
+        <iframe src="./game/puzzleGame.html" id="gameFrame"></iframe>
+      </section>
+    </main>
+  </body>
+  <script src="./js/data.js"></script>
+  <script src="./js/translations.js"></script>
+  <script src="./js/background.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/render.js"></script>
+</html>

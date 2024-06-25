@@ -1,0 +1,32 @@
+section#game {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+section#game h4 {
+  padding: 0 1rem;
+}
+
+#gameFrame {
+  border: none;
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 90%;
+  max-height: 1100px;
+  height: min(800px, 85dvw);
+  margin: auto;
+  filter: drop-shadow(0 0 3px var(--text-active-color));
+}
+
+@media (width < 800px) {
+  section#game {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  #gameFrame {
+    width: 100%;
+  }
+}

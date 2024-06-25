@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PuzzleGame</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="game" id="game">
+      <div class="gameContainer">
+        <div class="gamePuzzle"></div>
+        <div class="gamePuzzle"></div>
+        <div class="gamePuzzle"></div>
+        <div class="gamePuzzle"></div>
+        <div class="gamePuzzle"></div>
+        <div class="gamePuzzle"></div>
+        <div class="gamePuzzle"></div>
+        <div class="gamePuzzle"></div>
+
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+        <div class="gamePuzzlePlace"></div>
+      </div>
+      <div class="gameOverScreen">
+        <h2 class="gameOverTitle">Wygrałeś!</h2>
+        <p class="gameOverDescription"></p>
+        <button onclick="restartGame()">Zagraj ponownie</button>
+      </div>
+      <div class="gameErrorScreen">
+        <h2 class="gameOverTitle">Wystąpił błąd przy generowaniu puzzli!</h2>
+        <button onclick="restartGame()">Spróbuj ponownie</button>
+      </div>
+      <button
+        class="refreshButton fa-solid fa-arrows-rotate"
+        onclick="restartGame()"
+      ></button>
+      <button
+        class="helpGameButton fa-solid fa-comment-medical"
+        onclick="helpGame()"
+      ></button>
+      <div class="gameShowHint fa-regular fa-eye"></div>
+      <div class="gameHint"></div>
+    </div>
+  </body>
+  <script src="./game.js"></script>
+</html>

@@ -1,0 +1,28 @@
+.backgroundContainer {
+  position: fixed;
+  inset: 0;
+  font-family: fontAwsome;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+  z-index: -10;
+  background-image: linear-gradient(var(--bg), #0c192c, #0e61dd);
+}
+
+.backgroundContainer .falingStar {
+  position: absolute;
+  color: var(--color);
+  text-shadow: 0 0 10px var(--color);
+  animation: starAnimation 5s infinite linear;
+}
+
+@keyframes starAnimation {
+  0% {
+    filter: hue-rotate(0deg);
+    rotate: 0deg;
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    rotate: 720deg;
+  }
+}

@@ -1,0 +1,67 @@
+.interestsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.interestContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.5s scale;
+  /* filter: drop-shadow(0 0 14px var(--text-active-color)); */
+  text-shadow: 0 0 14px var(--text-active-color);
+  position: relative;
+  z-index: 2;
+}
+
+.interestContainer:hover {
+  scale: 1.1;
+}
+
+.interestsDetails {
+  position: absolute;
+  max-width: 0;
+  /* height: 0; */
+  text-wrap: nowrap;
+  overflow: hidden;
+  top: 1.5em;
+  transition: 0.5s;
+  background: rgba(15, 15, 15, 0.3);
+  text-shadow: none;
+  border-radius: 4px;
+}
+
+.interestContainer:hover .interestsDetails {
+  max-width: 1000%;
+  padding: 5px;
+  /* height: fit-content; */
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.3);
+  z-index: 25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.modalContentContainer {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--bg-color-1);
+  max-width: 70%;
+}
+
+.modalContent {
+  text-shadow: 0 0 5px var(--text-active-color);
+}
+
+@media (width < 700px) {
+  .modalContentContainer {
+    max-width: 90%;
+  }
+}
