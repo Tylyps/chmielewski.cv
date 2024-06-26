@@ -1,7 +1,7 @@
 const textTranslations = {
   en: {
     ABOUT: "About me",
-    ABOUT_TITLE: "Hi, I'm Jakub and I'm a software developer",
+    ABOUT_TITLE: "Hi, my name is Jakub and I'm a software developer",
     SKILLS: "Skills",
     EXPERIENCE: "Experience",
     EDUCATION: "Education",
@@ -77,7 +77,8 @@ Creating different versions of websites for sales statistics`,
       I like exploring new worlds and stories presented in games<br/>
       Learn new mechanics and inspiration<br/>
       I'm also learning how to make them from scratch<br/>
-      One day I would like to publish my games that would make thousands of players happy
+      One day I would like to publish my games that would make thousands of players happy<br/>
+      Recently, I participated in GameJam with my friends, where in 48 hours we created <a href="https://blacksmith44.itch.io/the-jammers" target="_blank">this game</a>
     `,
     INTEREST_COMPUTERS_DETAILS: `
       I am interested in their operation and development in the future.<br/>
@@ -104,7 +105,7 @@ Creating different versions of websites for sales statistics`,
   },
   pl: {
     ABOUT: "O mnie",
-    ABOUT_TITLE: "Cześć, jestem Jakub i jestem software developerem",
+    ABOUT_TITLE: "Cześć, mam na imię Jakub i jestem software developerem",
     SKILLS: "Umiejętności",
     EXPERIENCE: "Doświadczenie",
     EDUCATION: "Wykształcenie",
@@ -179,7 +180,8 @@ Creating different versions of websites for sales statistics`,
       Lubię poznawać nowe światy i historie przedstawione w grach<br/>
       Uczyć się nowych mechanik i inspiracji<br/>
       Uczę się również tworzenia ich od podstaw<br/>
-      Chciałbym pewnego dnia opublikować swoje gry, które cieszyłyby tysiące graczy
+      Chciałbym pewnego dnia opublikować swoje gry, które cieszyłyby tysiące graczy<br/>
+      Ostatnio brałem udział razem ze znajomymi w GameJamie gdzie w 48h stworzyliśmy <a href="https://blacksmith44.itch.io/the-jammers" target="_blank">taką grę</a>
     `,
     INTEREST_COMPUTERS_DETAILS: `
       Interesuje mnie ich działanie jak i rozwój w przyszłości<br/>
@@ -194,12 +196,12 @@ Creating different versions of websites for sales statistics`,
       W wolnych chwilach jeżdzę na rowerze<br/>
       Ostatnio również poszedłem na kurs pływania i żeglugi<br/>
       Zawsze interesowały mnie też akrobacje i parkour<br/>
-      A z ogólnych sportów lubię wszystkie, chociaż najbardziej koszykówkę
+      Z ogólnych sportów lubię wszystkie, a najbardziej koszykówkę
     `,
     INTEREST_LEARNING_DETAILS: `
       Lubię uczyć się różnych rzeczy z różnych dziedzin<br/>
       Tak jak przyroda często jest powiązana ze sobą w niespodziewane sposoby<br/>
-      Tak lubię łączyć ze sobą wiedzę z różnych dziedzić aby lepiej podchodzić do rozwiązywania problemów.
+      Tak lubię łączyć ze sobą wiedzę z różnych dziedzić, aby lepiej podchodzić do rozwiązywania problemów.
     `,
 
     CONTACT_INFO:

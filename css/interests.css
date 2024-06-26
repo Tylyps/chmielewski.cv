@@ -13,6 +13,7 @@
   text-shadow: 0 0 14px var(--text-active-color);
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
 .interestContainer:hover {
@@ -58,6 +59,10 @@
 
 .modalContent {
   text-shadow: 0 0 5px var(--text-active-color);
+}
+
+.modalContent a {
+  text-decoration: underline;
 }
 
 @media (width < 700px) {
