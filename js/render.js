@@ -1,25 +1,27 @@
-let aboutInterval;
 const renderAbout = () => {
-  const fadeDuration = 5000;
+  const fadeDuration = 2500;
   const aboutImg = document.querySelector(".aboutContainer .aboutImage");
 
-  const intervalFunc = () => {
+  const showImage = () => {
     const imagesArray = Object.keys(iconEnum);
     const imageRandomIndex = Math.floor(Math.random() * imagesArray.length);
     const randomImageUrl = iconEnum[imagesArray[imageRandomIndex]];
-    // console.log("imageRandomIndex", imageRandomIndex);
-    // console.log("imagesArray[imageRandomIndex]", imagesArray[imageRandomIndex]);
-    // console.log(
-    //   "iconEnum[imagesArray[imageRandomIndex]]",
-    //   iconEnum[imagesArray[imageRandomIndex]]
-    // );
 
     aboutImg.setAttribute("src", `./assets/${randomImageUrl}`);
+    aboutImg.classList.remove("hidden");
+    aboutImg.classList.add("visible");
+    setTimeout(hideImage, fadeDuration);
   };
 
-  intervalFunc();
-  aboutInterval = setInterval(intervalFunc, fadeDuration);
-  aboutImg.style = `--anim-duration: ${fadeDuration / 1000}s`;
+  const hideImage = () => {
+    aboutImg.classList.remove("visible");
+    aboutImg.classList.add("hidden");
+    setTimeout(showImage, fadeDuration);
+  };
+
+  showImage();
+
+  aboutImg.style = `--anim-duration: ${(fadeDuration - 100) / 1000}s`;
 };
 
 const renderSkills = () => {
@@ -48,6 +50,12 @@ const renderSkills = () => {
       labelsContainer.append(skillLabel);
     }
 
+    const subtitle = document.createElement("h6");
+    if (skill.subtitle !== undefined) {
+      subtitle.textContent = skill.subtitle;
+      labelsContainer.append(subtitle);
+    }
+
     const skillLvlLabel = document.createElement("h6");
     if (skill.lvl !== undefined) {
       skillLvlLabel.dataset.langKey = `SKILL_LVL_${skill.lvl}`;
@@ -66,10 +74,19 @@ const renderSkills = () => {
 };
 
 const renderWork = () => {
-  const workSection = document.querySelector("section#experience");
+  const workTitles = document.querySelector(
+    "section#experience .experienceTitle"
+  );
+  const workProjects = document.querySelector(
+    "section#experience .experienceInfo"
+  );
+  const projectsTitle = document.createElement("h3");
+  projectsTitle.dataset.langKey = "EXPERIENCE_PROJECTS";
+  projectsTitle.className = "workProjects";
+  workProjects.append(projectsTitle);
   const workDataElements = workData.map((wd) => {
-    const workContainer = document.createElement("article");
-    workContainer.classList.add("experienceContainer");
+    const workContainer = document.createElement("div");
+    workContainer.classList.add("titleContainer");
     const workEmployer = document.createElement("h3");
     workEmployer.textContent = wd.employer;
     workEmployer.className = "workEmployer";
@@ -79,19 +96,23 @@ const renderWork = () => {
     const workTitle = document.createElement("h3");
     workTitle.textContent = wd.workTitle;
     workTitle.className = "workTitle";
-    const workProjects = document.createElement("h3");
-    workProjects.dataset.langKey = "EXPERIENCE_PROJECTS";
-    workProjects.className = "workProjects";
+    workContainer.addEventListener("click", (e) => {
+      document.querySelectorAll(`.titleContainer`).forEach((workTitle) => {
+        workTitle.classList.remove("active");
+      });
+      document.querySelectorAll(`.projectsContainer`).forEach((projects) => {
+        projects.classList.remove("active");
+      });
+      e.currentTarget.classList.add("active");
+      document
+        .querySelector(`#${wd.workKey}.projectsContainer`)
+        .classList.add("active");
+    });
+    workContainer.append(workEmployer, workDate, workTitle);
 
     const projectsContainer = document.createElement("div");
     projectsContainer.classList.add("projectsContainer");
-    workContainer.append(
-      workEmployer,
-      workDate,
-      workTitle,
-      workProjects,
-      projectsContainer
-    );
+    projectsContainer.id = wd.workKey;
 
     const projects = wd.projects.map((project) => {
       const projectContainer = document.createElement("div");
@@ -102,12 +123,12 @@ const renderWork = () => {
       const projectTime = document.createElement("h4");
       projectTime.textContent = project.projectTime;
       const projectDescription = document.createElement("p");
-      projectDescription.dataset.langKey = `EXPERIENCE_${wd.wokrKey}_${project.projectKey}_DESCRIPTION`;
+      projectDescription.dataset.langKey = `EXPERIENCE_${wd.workKey}_${project.projectKey}_DESCRIPTION`;
       const projectResponsibilityTitle = document.createElement("h4");
       projectResponsibilityTitle.dataset.langKey =
         "EXPERIENCE_RESPONSIBILITY_TITLE";
       const projectResponsibility = document.createElement("p");
-      projectResponsibility.dataset.langKey = `EXPERIENCE_${wd.wokrKey}_${project.projectKey}_RESPONSIBILITY`;
+      projectResponsibility.dataset.langKey = `EXPERIENCE_${wd.workKey}_${project.projectKey}_RESPONSIBILITY`;
       const projectTechnologiesTitle = document.createElement("h4");
       projectTechnologiesTitle.dataset.langKey =
         "EXPERIENCE_TECHNOLOGIES_TITLE";
@@ -127,10 +148,20 @@ const renderWork = () => {
     });
 
     projectsContainer.append(...projects);
-    return workContainer;
+    return {
+      workTitleElement: workContainer,
+      projectsContainer,
+    };
   });
 
-  workSection.append(...workDataElements);
+  workDataElements.forEach((workData, i) => {
+    if (i == 0) {
+      workData.workTitleElement.classList.add("active");
+      workData.projectsContainer.classList.add("active");
+    }
+    workTitles.append(workData.workTitleElement);
+    workProjects.append(workData.projectsContainer);
+  });
 };
 
 const renderEducation = () => {

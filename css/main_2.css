@@ -1,0 +1,196 @@
+:root {
+  /* --bg-color-1: #0c192c;
+  --bg-color-2: #0e61dd; */
+  --bg-color-1: #000;
+  --bg-color-2: #333;
+  --text-active-color: #aaf2ff;
+  cursor: default;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100dvw;
+  min-height: 100dvh;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+#noscript {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000a;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  text-align: center;
+}
+
+header {
+  position: absolute;
+  box-sizing: border-box;
+  padding-top: 35px;
+  top: -70px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bookmarks {
+  font-size: 1rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 20px 20px 0 0;
+  background: #000a;
+  position: relative;
+  margin: 0 5px;
+  transition: translate 0.5s, background 0.5s;
+  height: 50px;
+}
+
+.bookmarks:hover,
+.bookmarks.active {
+  translate: 0 -10px;
+  background: #000;
+}
+
+.bookmarks a {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.bookmarks button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  text-shadow: 0 0 2px #fff, 0 0 5px #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s color;
+}
+
+.active a,
+a:hover {
+  color: var(--text-active-color);
+}
+
+main {
+  position: relative;
+  width: clamp(400px, 100%, 1200px);
+  background: #101010ee;
+  border-radius: 10px;
+  margin-top: 100px;
+  max-height: 80vh;
+}
+
+main::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 5px #fff, 0px 0px 15px #fff, 0px 0px 35px #fff;
+  z-index: -2;
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+}
+
+@media (width < 800px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    font-size: 26px;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  header {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  header * {
+    pointer-events: all;
+  }
+
+  nav {
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+  }
+
+  nav.active {
+    top: 0;
+    left: 0;
+  }
+
+  .bookmarks {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .bookmarks:hover,
+  .bookmarks.active {
+    translate: 0;
+    background: #000;
+  }
+
+  main {
+    width: 98%;
+    max-height: 100vh;
+    margin: 0;
+  }
+}

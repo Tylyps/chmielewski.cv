@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+#courses > p {
+  font-size: 0.6rem;
+}
+
 .courseContainer {
   display: grid;
   grid-template:
@@ -44,7 +48,7 @@
   grid-area: icons;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-grow: 1;
 }
 

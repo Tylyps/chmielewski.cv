@@ -20,6 +20,8 @@
   background: transparent;
   position: relative;
   transition: scale 0.3s;
+  /* flex: 1; */
+  min-width: fit-content;
 }
 
 .skillContainer:hover {
@@ -44,7 +46,8 @@
 
 @media (width < 800px) {
   .skillContainer {
-    font-size: 20px;
+    font-size: 1.2em;
+    flex: 1;
   }
 
   .skillContainer img {

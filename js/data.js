@@ -28,7 +28,7 @@ const workData = [
     startDate: "11.2021",
     endDate: "01.2024",
     workTitle: "Software Developer",
-    wokrKey: "BSG",
+    workKey: "BSG",
     projects: [
       {
         projectKey: "BSG",
@@ -67,7 +67,7 @@ const workData = [
     startDate: "07.2019",
     endDate: "10.2021",
     workTitle: "Junior Frontend Developer",
-    wokrKey: "TUATARA",
+    workKey: "TUATARA",
     projects: [
       {
         projectKey: "VANTI",
@@ -95,7 +95,7 @@ const workData = [
     startDate: "08.2018",
     endDate: "01.2019",
     workTitle: "Junior Frontend Developer",
-    wokrKey: "NG",
+    workKey: "NG",
     projects: [
       {
         projectKey: "PCA",
@@ -110,7 +110,7 @@ const workData = [
     startDate: "05.2018",
     endDate: "07.2018",
     workTitle: "Junior Frontend Developer",
-    wokrKey: "BC",
+    workKey: "BC",
     projects: [
       {
         projectKey: "WS",
@@ -125,7 +125,7 @@ const workData = [
   //   startDate: "",
   //   endDate: "",
   //   workTitle: "",
-  //   wokrKey: "",
+  //   workKey: "",
   //   projects: [
   //     {
   //       projectName: "",
@@ -191,7 +191,8 @@ const skillsData = {
     },
     {
       imageUrl: iconEnum.ROKU,
-      title: "Roku (BrightScript & SceneGraph)",
+      title: "Roku",
+      subtitle: "(BrightScript & SceneGraph)",
       lvl: 2,
     },
     {
@@ -232,7 +233,7 @@ const skillsData = {
     {
       imageUrl: iconEnum.ANGULAR,
       title: "Angular2+",
-      lvl: 1,
+      lvl: 2,
     },
     {
       imageUrl: iconEnum.MONGO_DB,
@@ -303,8 +304,8 @@ const coursesData = [
     skillsIconUrl: [
       iconEnum.JS,
       iconEnum.NODE,
-      iconEnum.MONGO_DB,
       iconEnum.REACT,
+      iconEnum.MONGO_DB,
     ],
   },
   {
@@ -314,21 +315,21 @@ const coursesData = [
     skillsIconUrl: [
       iconEnum.JS,
       iconEnum.NODE,
-      iconEnum.MONGO_DB,
       iconEnum.REACT,
+      iconEnum.MONGO_DB,
     ],
   },
   {
     courseTitle: "The Complete Node.js Developer Course (3rd Edition)",
     courseCreator: "Andrew Mead / Udemy",
     courseTime: "04.2022",
-    skillsIconUrl: [iconEnum.JS, iconEnum.NODE, iconEnum.MONGO_DB],
+    skillsIconUrl: [iconEnum.NODE, iconEnum.JS, iconEnum.MONGO_DB],
   },
   {
     courseTitle: "Complete C# Masterclass",
     courseCreator: "Denis Panjuta / Udemy",
-    courseTime: "05.2022",
-    skillsIconUrl: [iconEnum.CSHARP],
+    courseTime: "05.2022, 11.2024",
+    skillsIconUrl: [iconEnum.CSHARP, iconEnum.UNITY],
   },
   {
     courseTitle: "Unity Turn-Based Strategy Game: Intermediate C# Coding",
@@ -349,10 +350,16 @@ const coursesData = [
     skillsIconUrl: [
       iconEnum.JS,
       iconEnum.NODE,
-      iconEnum.MYSQL,
       iconEnum.MONGO_DB,
+      iconEnum.MYSQL,
       iconEnum.GRAPHQL,
     ],
+  },
+  {
+    courseTitle: "Angular - The Complete Guide (2024 Edition)",
+    courseCreator: "Maximilian Schwarzmüller / Udemy",
+    courseTime: "10.2024",
+    skillsIconUrl: [iconEnum.ANGULAR, iconEnum.JS],
   },
 ];
 
