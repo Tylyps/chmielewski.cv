@@ -2,27 +2,51 @@
   position: fixed;
   inset: 0;
   font-family: fontAwsome;
-  width: 100dvw;
-  height: 100dvh;
+  min-width: 100dvw;
+  width: 100%;
+  /* height: 100dvh; */
+  height: 100%;
   overflow: hidden;
   z-index: -10;
-  background-image: linear-gradient(var(--bg), #0c192c, #0e61dd);
+  --bg: 0deg;
+  background-image: linear-gradient(
+    var(--bg),
+    var(--bg-color-1),
+    var(--bg-color-2)
+  );
+  background-image: linear-gradient(
+    in lch var(--bg),
+    var(--bg-color-1),
+    var(--bg-color-2)
+  );
+  transition: background-image 0.5s;
 }
 
-.backgroundContainer .falingStar {
+.backgroundContainer .snowflake {
+  --small: 3px;
+  --medium: 7px;
+  width: var(--small);
+  height: var(--small);
   position: absolute;
-  color: var(--color);
-  text-shadow: 0 0 10px var(--color);
-  animation: starAnimation 5s infinite linear;
+  background: #fff;
+  border-radius: 50%;
+  animation: snowFall 6s linear infinite, wind 10s ease-in-out infinite;
+  top: -10%;
 }
 
-@keyframes starAnimation {
-  0% {
-    filter: hue-rotate(0deg);
-    rotate: 0deg;
-  }
+.snowflake:nth-child(2n + 3) {
+  width: var(--medium);
+  height: var(--medium);
+}
+
+@keyframes snowFall {
   100% {
-    filter: hue-rotate(360deg);
-    rotate: 720deg;
+    top: 100%;
+  }
+}
+
+@keyframes wind {
+  50% {
+    transform: translateX(120px);
   }
 }

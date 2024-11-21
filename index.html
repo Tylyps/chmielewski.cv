@@ -9,8 +9,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="data:," />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/menuBUtton.css" />
+    <link rel="stylesheet" href="./css/sections.css" />
     <link rel="stylesheet" href="./css/background.css" />
+    <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./css/skills.css" />
     <link rel="stylesheet" href="./css/experience.css" />
     <link rel="stylesheet" href="./css/education.css" />
@@ -22,38 +27,66 @@
   </head>
   <body>
     <div class="backgroundContainer">
-      <!-- <i class="fa-solid fa-star"></i> -->
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
     </div>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#skills" data-lang-key="SKILLS"> Umiejętności </a>
-          </li>
-          <li>
-            <a href="#experience" data-lang-key="EXPERIENCE"> Doświadczenie </a>
-          </li>
-          <li>
-            <a href="#education" data-lang-key="EDUCATION"> Wykształcenie </a>
-          </li>
-          <li><a href="#courses" data-lang-key="COURSES"> Kursy </a></li>
-          <li>
-            <a href="#interests" data-lang-key="INTRESTS"> Zainteresowania </a>
-          </li>
-          <li><a href="#links" data-lang-key="LINKS"> Linki </a></li>
-          <li>
-            <button id="languageBtn">🇵🇱/🇬🇧</button>
-          </li>
-        </ul>
-      </nav>
-      <button class="menuButton">
-        <div></div>
-        <div></div>
-        <div></div>
-      </button>
-    </header>
     <main>
-      <section id="about" class="pageSection">
+      <header>
+        <nav>
+          <ul>
+            <li class="bookmarks active">
+              <a href="#about" data-lang-key="ABOUT"> O Mnie </a>
+            </li>
+            <li class="bookmarks">
+              <a href="#skills" data-lang-key="SKILLS"> Umiejętności </a>
+            </li>
+            <li class="bookmarks">
+              <a href="#experience" data-lang-key="EXPERIENCE">
+                Doświadczenie
+              </a>
+            </li>
+            <li class="bookmarks">
+              <a href="#education" data-lang-key="EDUCATION"> Wykształcenie </a>
+            </li>
+            <li class="bookmarks">
+              <a href="#courses" data-lang-key="COURSES"> Kursy </a>
+            </li>
+            <li class="bookmarks">
+              <a href="#interests" data-lang-key="INTRESTS">
+                Zainteresowania
+              </a>
+            </li>
+            <li class="bookmarks">
+              <a href="#links" data-lang-key="LINKS"> Linki </a>
+            </li>
+            <li class="bookmarks">
+              <a href="#game" data-lang-key="GAME"> Gierka </a>
+            </li>
+            <li class="bookmarks">
+              <button id="languageBtn">🇵🇱/🇬🇧</button>
+            </li>
+          </ul>
+        </nav>
+        <button class="menuButton">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </header>
+      <section id="about" class="pageSection active">
         <h2 data-lang-key="ABOUT">O mnie</h2>
         <article class="aboutContainer">
           <div class="aboutDataContainer">
@@ -86,6 +119,10 @@
       </section>
       <section id="experience" class="pageSection">
         <h2 data-lang-key="EXPERIENCE">Doświadczenie</h2>
+        <article class="experienceContainer">
+          <div class="experienceTitle"></div>
+          <div class="experienceInfo"></div>
+        </article>
         <!-- <article>
           <h3>WorkEmployer</h3>
           <h4>WorkDate</h4>
@@ -112,6 +149,7 @@
       </section>
       <section id="courses" class="pageSection">
         <h2 data-lang-key="COURSES">Kursy</h2>
+        <p data-lang-key="COURSES_DATE"></p>
       </section>
       <section id="interests" class="pageSection">
         <h2 data-lang-key="INTRESTS">Zainteresowania</h2>
@@ -136,8 +174,12 @@
         <iframe src="./game/puzzleGame.html" id="gameFrame"></iframe>
       </section>
     </main>
+    <noscript id="noscript">
+      This page requires JS for correct working. Please enable JS to continue.
+    </noscript>
   </body>
   <script defer src="./js/data.js"></script>
+  <script defer src="./js/translations_data.js"></script>
   <script defer src="./js/translations.js"></script>
   <script defer src="./js/background.js"></script>
   <script defer src="./js/main.js"></script>

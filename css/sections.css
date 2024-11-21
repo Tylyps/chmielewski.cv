@@ -1,0 +1,29 @@
+.pageSection {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  /* WHEN interpolate-size or calc-size will work correctly on most of browsers */
+  /* transition: height 0.5s, padding 0.5s;
+  height: 0;
+  interpolate-size: allow-keywords; */
+  transition: max-height 0.5s, padding 0.5s;
+  max-height: 0;
+}
+
+.pageSection.active {
+  /* height: auto; */
+  max-height: 80vh;
+
+  padding: 10px;
+  overflow: auto;
+}
+
+@media (width < 800px) {
+  .pageSection.active {
+    padding: 10px;
+    max-height: 100vh;
+    overflow-x: hidden;
+  }
+}
