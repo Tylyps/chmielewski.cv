@@ -65,16 +65,15 @@
   overflow: hidden;
   gap: 20px;
   max-height: 0;
-  height: calc(100% - 43px);
-  padding: 0;
-  transition: 0.5s max-height, 0.5s padding;
+  height: calc(100% - 103px);
+  padding: 10px;
+  /* transition: 0.5s max-height, 0.5s padding; */
+  transition: 0.5s max-height;
 }
 
 .projectsContainer.active {
-  /* max-height: calc(100% - 1rem); */
-  max-height: 100vh;
+  max-height: 80vh;
   overflow: scroll;
-  padding: 10px;
 }
 
 .projectInfoContainer {

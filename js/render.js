@@ -208,23 +208,7 @@ const renderEducation = () => {
   });
 
   educationsContainer.append(...educations);
-
-  // SPECIALIZATION: "Specialization: ",
-  // SPECIALIZATION_IT_TECH: "IT Technician",
-  // SPECIALIZATION_IT: "IT",
-  // EDUCATION_LEVEL: "Degrees: ",
-  // EDUCATION_LEVEL_MASTER: "Master of Science",
-  // EDUCATION_LEVEL_TECHNICIAN: "Technician",
 };
-
-{
-  /* <article>
-<h3>Technikum Elektryczne</h3>
-<h4>09.2013 - 04.2017</h4>
-<h4>Specjalizacja: Technik Informatyk</h4>
-<h4>Poziom wykształcenia: Średnie</h4>
-</article> */
-}
 
 const renderCourses = () => {
   const courses = document.querySelector("#courses");
@@ -286,11 +270,7 @@ const renderInterests = () => {
     interestTitle.dataset.langKey = interest.nameKey;
     const interestIcon = document.createElement("i");
     interestIcon.className = interest.iconClass;
-    // const interestDetails = document.createElement("p");
-    // interestDetails.className = "interestsDetails";
-    // interestDetails.dataset.langKey = interest.nameKey + "_DETAILS";
 
-    // interestContainer.append(interestTitle, interestIcon, interestDetails);
     interestContainer.append(interestTitle, interestIcon);
 
     return interestContainer;
@@ -318,11 +298,24 @@ const displayModal = (key) => {
   });
 
   document.body.append(modalContainer);
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      modalContainer.classList.add("show");
+    });
+  });
 };
 
+let isClosingModal = false;
 const closeModal = () => {
+  if (isClosingModal) return;
+  isClosingModal = true;
   const modal = document.querySelector(".modal");
-  modal.remove();
+  modal.classList.remove("show");
+  setTimeout(() => {
+    modal.remove();
+    isClosingModal = false;
+  }, 200);
 };
 
 renderAbout();

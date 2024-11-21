@@ -4,7 +4,7 @@ const snowFlakes = document.querySelectorAll(".snowflake");
 snowFlakes.forEach((snow) => {
   let snowStyle = "";
   snowStyle += `left: ${Math.ceil(Math.random() * 100)}%;`;
-  snowStyle += `animation-delay: ${Math.ceil(Math.random() * 5 * 10) / 10}s;`;
+  snowStyle += `animation-delay: ${Math.ceil(Math.random() * 7 * 10) / 10}s;`;
 
   snow.style = snowStyle;
 });

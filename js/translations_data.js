@@ -189,7 +189,7 @@ Creating different versions of websites for sales statistics`,
       Lubię poznawać nowe światy i historie przedstawione w grach<br/>
       Uczyć się nowych mechanik i inspiracji<br/>
       Uczę się również tworzenia ich od podstaw<br/>
-      Chciałbym pewnego dnia opublikować swoje gry, które cieszyłyby tysiące graczy<br/>
+      Chciałbym pewnego dnia publikować swoje gry, które cieszyłyby tysiące graczy<br/>
       Ostatnio brałem udział razem ze znajomymi w GameJamie gdzie w 48h stworzyliśmy <a href="https://blacksmith44.itch.io/the-jammers" target="_blank">taką grę</a>
     `,
     INTEREST_COMPUTERS_DETAILS: `
