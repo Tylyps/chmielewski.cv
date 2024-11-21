@@ -288,7 +288,7 @@ const coursesData = [
   {
     courseTitle: "React Native - The Practical Guide",
     courseCreator: "Maximilian Schwarzmüller / Udemy",
-    courseTime: "03.2019",
+    courseTime: "03.2019, 09.2024",
     skillsIconUrl: [iconEnum.REACT, iconEnum.REDUX, iconEnum.JS],
   },
   {

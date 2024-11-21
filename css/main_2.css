@@ -141,13 +141,6 @@ main::before {
 }
 
 @media (width < 800px) {
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    font-size: 26px;
-  }
-
   .menuButton {
     display: block;
   }
@@ -177,7 +170,12 @@ main::before {
     left: 0;
   }
 
+  nav ul {
+    flex-direction: column;
+  }
+
   .bookmarks {
+    font-size: 1.2rem;
     border-radius: 0;
     margin: 0;
   }
@@ -186,6 +184,10 @@ main::before {
   .bookmarks.active {
     translate: 0;
     background: #000;
+  }
+
+  .bookmarks a {
+    place-content: center;
   }
 
   main {

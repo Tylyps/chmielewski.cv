@@ -53,6 +53,11 @@
   border-radius: 0 6px 6px 4px;
 }
 
+.experienceInfo .workProjects {
+  width: 100%;
+  padding: 5px;
+}
+
 .projectsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +65,7 @@
   overflow: hidden;
   gap: 20px;
   max-height: 0;
-  height: calc(100% - 33px);
+  height: calc(100% - 43px);
   padding: 0;
   transition: 0.5s max-height, 0.5s padding;
 }
@@ -70,10 +75,6 @@
   max-height: 100vh;
   overflow: scroll;
   padding: 10px;
-}
-
-.projectsContainer .workProjects {
-  width: 100%;
 }
 
 .projectInfoContainer {
@@ -106,6 +107,18 @@
 
 @media (width < 800px) {
   .projectInfoContainer {
+    width: 100%;
+  }
+
+  .experienceContainer {
+    flex-direction: column;
+    max-height: 99vh;
+    padding: 0;
+    height: auto;
+    max-height: none;
+  }
+
+  .experienceInfo {
     width: 100%;
   }
 }

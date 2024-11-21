@@ -22,7 +22,8 @@
 
 @media (width < 800px) {
   .pageSection.active {
-    padding: 30px;
+    padding: 10px;
     max-height: 100vh;
+    overflow-x: hidden;
   }
 }
